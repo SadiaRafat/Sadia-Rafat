@@ -2,19 +2,15 @@
 #include <iostream>
 using namespace std;//123--321
 
-int main() {
-   int n,temp,sum=0,r;
-  
-   cout<<"Enter Number:"<<endl;
-   cin>>n;
-   temp=n;
-   while(temp!=0){
-       r = temp % 10;
-       sum = sum*10 + r;
-       temp = temp/10;
-      
-   }
-   cout<<"Reversed Number:"<<sum<<endl;
-
-    return 0;
+int reverseDigits(int n){
+    string s = to_string(n);
+    reverse(s.begin(),s.end());
+    n = stoi(s);
+    return n;
 }
+int main(){
+ int n = 4562;
+ cout<< reverseDigits(n);
+ return 0;
+}
+
